@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>resultados</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+		<link rel="stylesheet" href="main.py">
+	    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="app.py">
+	<div class="navbar a.right">
+     <a href="preencher.html">Cadastro Paciente</a>
+      <br><br/>
+	</div>
+</head>
+<body>
+		<center>
+		<br>
+		<div class="container"><br/>
+		<table border="1">
+        	<tr>
+            	<h2>Historico</h2>
+	        </tr>
+    	    {% for variaveis in lista %}
+        	<tr>
+            	<td>{{variaveis.getName()}}</td>
+				<td>{{variaveis.getCpf()}}</td>
+
+	        </tr>
+			{% endfor %}
+		</table>
+			</div>
+		<h3>Paciente Cadastrado!</h3>
+
+		<div id="divBusca">
+			<form method="post" action="/perfil">
+             <input type="text" id="txtBusca" name="txtbusca" placeholder="Cpf do paciente..." required/>
+             <input type="submit" value="Pesquisar">
+			</form>
+        </div>
+
+		</center>
+</body>
+		<center>
+		</center>
+
+</body>
+
+<script>
+    document
+        .querySelector('.form')
+        .addEventListener('submit', (e)=>{
+            e.preventDefault()
+        });
+</script>
+
+</html>

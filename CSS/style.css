@@ -1,0 +1,112 @@
+body {
+    background: #ddd4d4;
+	font-family: 'Montserrat', sans-serif;
+}
+
+header {
+	background: #BBBBBB;
+	padding: 60px 0;
+}
+
+.caixa {
+	position: relative;
+	width: 940px;
+	margin: 0 auto;
+}
+
+h1 {
+    margin: 0 0 3em;
+	text-align: center;
+    font-style: italic;
+    font-weight: bold;
+}
+
+main ul {
+    margin-top: 325px;
+    margin-bottom: 325px;
+}
+
+main li {
+	display: inline;
+	margin: 0 0 0 15px;
+    padding-left: 550px;
+}
+
+main a {
+	text-transform: uppercase;
+	color: #000000;
+	font-weight: bold;
+	font-size: 22px;
+	text-decoration: none;
+}
+
+main a:hover {
+	color: #C78C19;
+	text-decoration: underline;
+}
+
+.login {
+	width: 940px;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+
+main form {
+    width: 940px;
+	margin: 100px auto;
+	padding: 50px 0;
+}
+
+main form a {
+    margin-left: 225px;
+}
+
+footer {
+	text-align: center;
+	background: url("../Imagens/bg.jpg");
+	padding: 20px 0;
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+
+.copyright {
+	color: #FFFFFF;
+	font-size: 13px;
+	margin: 20px 0 0;
+}
+
+form {
+	margin: 40px 0;
+}
+
+form label, form legend {
+	display:block;
+	font-size: 20px;
+	margin: 0 0 10px;
+}
+
+.input-padrao {
+	display: block;
+	margin: 0 0 20px;
+	padding: 10px 50px;  
+	width: 50%;
+}
+
+.enviar {
+	width:40%;
+	padding: 15px 0;
+	background: orange;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	border: none;
+	border-radius: 5px;
+	transition: 1s all;
+	cursor: pointer;
+}
+
+.enviar:hover {
+	background: darkorange;
+	transform: scale(1.2);
+}
