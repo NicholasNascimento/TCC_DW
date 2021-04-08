@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
@@ -15,7 +15,9 @@
         rel="stylesheet">
 
     <!-- Stylesheet -->
+	<link rel="stylesheet" href="../CSS/reset.css">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+	<link rel="stylesheet" href="../CSS/stylemain.css">
     <link rel="stylesheet" href="app.py">
 	<div class="navbar a.right">
      <a href="preencher.html">Cadastro Paciente</a>
@@ -23,7 +25,21 @@
 	</div>
 </head>
 <body>
-		<center>
+	<header>
+        <div class="navbar a.right">
+            <h1>Darwini Web</h1>
+
+            <nav>
+                <ul>
+                    <li><a href="preencher.html">Cadastro do Paciente</a></li>
+                    <li><a href="perfil.html">Buscar Paciente</a></li>
+					<input type="button" value="Desconectar">
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+	<center>
 		<br>
 		<div class="container"><br/>
 		<table border="1">
@@ -41,12 +57,14 @@
 			</div>
 		<h3>Paciente Cadastrado!</h3>
 
-		<div id="divBusca">
-			<form method="post" action="/perfil">
-             <input type="text" id="txtBusca" name="txtbusca" placeholder="Cpf do paciente..." required/>
-             <input type="submit" value="Pesquisar">
-			</form>
-        </div>
+		<div class="container">
+			<div id="divBusca">
+				<form method="post" action="/perfil">
+             		<input type="text" id="txtBusca" name="txtbusca" placeholder="Cpf do paciente..." required/>
+             		<input type="submit" value="Pesquisar">
+				</form>
+        	</div>
+		</div>
 
 		</center>
 </body>

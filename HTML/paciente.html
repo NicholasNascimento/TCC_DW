@@ -1,63 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title Paciente> </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title Paciente> </title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
-  <div class="navbar a.right">
-     <a href="preencher.html">Cadastro Paciente</a><a href="perfil.html">Historico de pacientes</a>
-      <br>
-  </div>
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="stylesheet" href="../CSS/stylemain.css">
 </head>
 
 <body>
-        <!-- header start -->
-        <div id="header" class="section">
-            <br/>
+    <header>
+        <div class="navbar a.right">
+            <h1>Darwini Web</h1>
+
+            <nav>
+                <ul>
+                    <li><a href="preencher.html">Cadastro do Paciente</a></li>
+                    <li><a href="perfil.html">Buscar Paciente</a></li>
+                    <input type="button" value="Desconectar">
+                </ul>
+            </nav>
         </div>
-        <!-- header end -->
+    </header>
 
         <div class="container text-center">
             <div class="panel">
-            <div class="row">
-                <div class="card bg-white border-steal col-xl-12">
+                <div class="row">
+                    <div class="card bg-white border-steal col-xl-12">
 
-                    <div class="card-body-container">
-                        <h3 id="card-title">Informações do Paciente</h3>
+                        <div class="container">
+                            <div class="card-body-container">
+                                <h3 id="card-title">Informações do Paciente</h3>
 
-                        <div class="card-body-details">
-                            <div class="row empty-space"><!-- Some Space --></div>
+                                <div class="card-body-details">
+                                    <div class="row empty-space"><!-- Some Space --></div>
 
-                            <div class="row">
-                                <div class="col-xs-6 text-right"><strong>Nome:</strong></div>
-                                <div class="col-xs-6 text-left">{{name}}</div>
+                                    <div class="row">
+                                        <div class="col-xs-6 text-right"><strong>Nome:</strong></div>
+                                        <div class="col-xs-6 text-left">{{name}}</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-6 text-right"><strong>CPF:</strong></div>
+                                        <div class="col-xs-6 text-left">{{cpf}}</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-6 text-right"><strong>Data de nascimento:</strong></div>
+                                        <div class="col-xs-6 text-left">{{bday}}</div>
+                                        <div class="row">
+
+                                        <div class="col-xs-6 text-right"><strong>Alergia:</strong></div>
+                                        <div class="col-xs-6 text-left">{{alergia}}</div>
+                                    </div>
+                                        <div class="col-xs-6 text-right" ><strong>Remedios em uso:</strong></div>
+                                        <div class="col-xs-6 text-left">{{medicacao}}</div>
+                                        <div class="col-xs-6 text-right" ><strong>Motivo da consulta:</strong></div>
+                                        <div class="col-xs-6 text-left">{{motivo}}</div>
+                                        <div class="col-xs-6 text-right" ><strong>Numero de contato:</strong></div>
+                                        <div class="col-xs-6 text-left">{{telefone}}</div>
+                                </div>
                             </div>
-                            <div class="row">
-                                <div class="col-xs-6 text-right"><strong>CPF:</strong></div>
-                                <div class="col-xs-6 text-left">{{cpf}}</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-6 text-right"><strong>Data de nascimento:</strong></div>
-                                <div class="col-xs-6 text-left">{{bday}}</div>
-                                <div class="row">
-
-                                <div class="col-xs-6 text-right"><strong>Alergia:</strong></div>
-                                <div class="col-xs-6 text-left">{{alergia}}</div>
-                            </div>
-                                <div class="col-xs-6 text-right" ><strong>Remedios em uso:</strong></div>
-                                <div class="col-xs-6 text-left">{{medicacao}}</div>
-                                <div class="col-xs-6 text-right" ><strong>Motivo da consulta:</strong></div>
-                                <div class="col-xs-6 text-left">{{motivo}}</div>
-                                <div class="col-xs-6 text-right" ><strong>Numero de contato:</strong></div>
-                                <div class="col-xs-6 text-left">{{telefone}}</div>
+                        </div>
                     </div>
-                    </div>
-                    </div>
-                    </div>
+                </div>
             </div>
-            </div>
-            </div>
+        </div>
+    </div>
 
 </body>
 

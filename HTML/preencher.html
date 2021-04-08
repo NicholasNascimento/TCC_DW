@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
 }
     <meta charset="UTF-8">
@@ -15,15 +15,25 @@
         rel="stylesheet">
 
     <!-- Stylesheet -->
+    <link rel="stylesheet" href="../CSS/reset.css">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
-    <link rel="stylesheet" href="app.py">
-    <div class="navbar a.right">
-     <a href="perfil.html">Historico de Paciente</a>
-      <br><br/>
-	</div>
+    <link rel="stylesheet" href="../CSS/stylemain.css">
 </head>
 
 <body>
+    <header>
+        <div class="navbar a.right">
+            <h1>Darwini Web</h1>
+
+            <nav>
+                <ul>
+                    <li><a href="preencher.html">Cadastro do Paciente</a></li>
+                    <li><a href="perfil.html">Buscar Paciente</a></li>
+                    <input type="button" value="Desconectar">
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <div class="container">
         <br>
