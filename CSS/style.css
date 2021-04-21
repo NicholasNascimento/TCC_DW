@@ -1,9 +1,19 @@
-main{
-	margin: 200px 200px;
+form{
+	margin: 10% 10%;
+}
+
+.figure-web{
+	margin: 10% 0;
+	text-align: center;
+}
+
+.form-check{
+	margin-bottom: 15px;
 }
 
 footer{
 	position: absolute;
 	bottom: 0;
-	margin-left: 40%;
+	margin-left: 45%;
+	font-size: 14px;
 	}
