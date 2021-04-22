@@ -3,70 +3,69 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title Paciente> </title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
-    <link rel="stylesheet" href="../CSS/reset.css">
+    <title>Paciente</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="../CSS/stylemain.css">
 </head>
 
 <body>
-    <header>
-        <div class="navbar a.right">
-            <h1>Darwini Web</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+		<a class="navbar-brand text-light" href="#">Darwini Web</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+		  <ul class="navbar-nav">
+			<li class="nav-item active">
+			  <a class="nav-link text-light" href="perfil.html">Buscar Paciente</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link text-light" href="preencher.html">Cadastrar Paciente</a>
+			</li>
+			<a href="index.html" class="logout"><img src="../Images/logout-47.png" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure."></a>  
+		</ul>
+		</div>
+	</nav>
 
-            <nav>
-                <ul>
-                    <li><a href="preencher.html">Cadastro do Paciente</a></li>
-                    <li><a href="perfil.html">Buscar Paciente</a></li>
-                    <input type="button" value="Desconectar">
-                </ul>
-            </nav>
+    <main>
+        <div class="container">
+            <h2 id="card-title">Informações do Paciente</h2>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <div class="col-xs-6"><strong>Nome:</strong></div>
+                    <div class="col-xs-6">{{name}}</div>
+                </li>
+                <li class="list-group-item">
+                    <div class="col-xs-6"><strong>CPF:</strong></div>
+                    <div class="col-xs-6">{{cpf}}</div>
+                </li>
+                <li class="list-group-item">
+                    <div class="col-xs-6"><strong>Data de nascimento:</strong></div>
+                    <div class="col-xs-6">{{bday}}</div>
+                </li>
+                <li class="list-group-item">
+                    <div class="col-xs-6"><strong>Alergia:</strong></div>
+                    <div class="col-xs-6">{{alergia}}</div>
+                </li>
+                <li class="list-group-item">
+                    <div class="col-xs-6" ><strong>Remedios em uso:</strong></div>
+                    <div class="col-xs-6">{{medicacao}}</div>
+                </li>
+                <li class="list-group-item">
+                    <div class="col-xs-6" ><strong>Motivo da consulta:</strong></div>
+                    <div class="col-xs-6">{{motivo}}</div>
+                </li>
+                <li class="list-group-item">
+                    <div class="col-xs-6" ><strong>Numero de contato:</strong></div>
+                    <div class="col-xs-6">{{telefone}}</div>
+                </li>
+            </ul>
         </div>
-    </header>
-
-        <div class="container text-center">
-            <div class="panel">
-                <div class="row">
-                    <div class="card bg-white border-steal col-xl-12">
-
-                        <div class="container">
-                            <div class="card-body-container">
-                                <h3 id="card-title">Informações do Paciente</h3>
-
-                                <div class="card-body-details">
-                                    <div class="row empty-space"><!-- Some Space --></div>
-
-                                    <div class="row">
-                                        <div class="col-xs-6 text-right"><strong>Nome:</strong></div>
-                                        <div class="col-xs-6 text-left">{{name}}</div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-xs-6 text-right"><strong>CPF:</strong></div>
-                                        <div class="col-xs-6 text-left">{{cpf}}</div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-xs-6 text-right"><strong>Data de nascimento:</strong></div>
-                                        <div class="col-xs-6 text-left">{{bday}}</div>
-                                        <div class="row">
-
-                                        <div class="col-xs-6 text-right"><strong>Alergia:</strong></div>
-                                        <div class="col-xs-6 text-left">{{alergia}}</div>
-                                    </div>
-                                        <div class="col-xs-6 text-right" ><strong>Remedios em uso:</strong></div>
-                                        <div class="col-xs-6 text-left">{{medicacao}}</div>
-                                        <div class="col-xs-6 text-right" ><strong>Motivo da consulta:</strong></div>
-                                        <div class="col-xs-6 text-left">{{motivo}}</div>
-                                        <div class="col-xs-6 text-right" ><strong>Numero de contato:</strong></div>
-                                        <div class="col-xs-6 text-left">{{telefone}}</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    </main>
+    
+    <footer>
+		<p class="copyright">&copy; Copyright Darwini Web - 2021</p>
+	</footer>
 </body>
 
 </html>
