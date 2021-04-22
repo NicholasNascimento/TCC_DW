@@ -1,68 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dados do paciente</title>
 
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
-
-    <!-- Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500&display=swap"
-        rel="stylesheet">
-
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="../CSS/reset.css">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
-    <link rel="stylesheet" href="../CSS/stylemain.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="../CSS/stylemain.css">
 </head>
-
 <body>
-    <header>
-        <div class="navbar a.right">
-            <h1>Darwini Web</h1>
-
-            <nav>
-                <ul>
-                    <li><a href="preencher.html">Cadastro do Paciente</a></li>
-                    <li><a href="perfil.html">Buscar Paciente</a></li>
-                    <input type="button" value="Desconectar">
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+		<a class="navbar-brand text-light" href="#">Darwini Web</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+		  <ul class="navbar-nav">
+			<li class="nav-item active">
+			  <a class="nav-link text-light" href="perfil.html">Buscar Paciente<span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link text-light" href="preencher.html">Cadastrar Paciente</a>
+			</li>
+			<a href="index.html" class="logout"><img src="../Images/logout-47.png" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure."></a>  
+		</ul>
+		</div>
+	</nav>
 
     <div class="container">
-        <br>
+        <main>
+            <br>
 
-        <h3>Dados do paciente!</h3>
+            <h3>Dados do paciente!</h3>
 
-        <form method="post" action="/login">
-            <input type="name" placeholder="Nome" id="name" name="name" required>
-            <div>
-                <input type="cpf" placeholder="Cpf" id="cpf" name="cpf" required>
-            </div>
-            <div>
-                <input type="date" placeholder="Data de nascimento" id="bday" name="bday" required>
-            </div>
-            <div>
-                <input type="string" placeholder="Alergias" id="alergias" name="alergias">
-            </div>
-            <div>
-                <input type="string" placeholder="Remedios em uso" id="medicacao" name="medicacao">
-            </div>
-            <div>
-                <input type="text" placeholder="Motivo do atendimento" id="motivo" name="motivo" required>
-            </div>
-            <div>
-                <input type="tel" placeholder="Telefone" id="telefone" name="telefone" required>
-            </div>
-            <input type="submit" value="Cadastrar">
-        </form>
+            <form method="post" action="/login">
+                <div class="form-row-group">
+                    <input type="text" class="form-control" id="name" placeholder="Nome" required>
+                </div>
+                <div class="form-row-group">
+                    <input type="cpf" class="form-control" id="cpf" placeholder="CPF" required>
+                </div>
+                <div class="form-row-group">
+                    <input type="date" class="form-control" id="bday" placeholder="Data de Nascimento" required>
+                </div>
+                <div class="form-row-group">
+                    <input type="text" class="form-control" id="alergias" placeholder="Alergias" required>
+                </div>
+                <div class="form-row-group">
+                    <input type="text" class="form-control" id="medicacao" placeholder="Remédios em Uso" required>
+                </div>
+                <div class="form-row-group">
+                    <input type="text" class="form-control" id="motivo" placeholder="Motivo do Atendimento" required>
+                </div>
+                <div class="form-row-group">
+                    <input type="text" class="form-control" id="tel" placeholder="Telefone" required>
+                    <a class="btn btn-outline-success" href="perfil.html" role="button">Cadastrar</a>
+                </div>
+            </form>
+        </main>
     </div>
+
+    <footer>
+        <p class="copyright">&copy; Copyright Darwini Web - 2021</p>
+    </footer>
 </body>
 <script>
     document
